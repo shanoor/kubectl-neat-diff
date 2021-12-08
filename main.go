@@ -28,7 +28,7 @@ func main() {
 			return err
 		}
 
-		c := exec.Command("diff", "-uN", args[0], args[1])
+		c := exec.Command("colordiff", "-uN", args[0], args[1])
 		c.Stdout = os.Stdout
 		c.Stderr = os.Stderr
 		return c.Run()
